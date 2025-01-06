@@ -1,0 +1,49 @@
+//allprojects {
+//    repositories {
+//        google()
+//        mavenCentral()
+//    }
+//}
+//
+//rootProject.buildDir = "../build"
+//subprojects {
+//    project.buildDir = "${rootProject.buildDir}/${project.name}"
+//}
+//subprojects {
+//    project.evaluationDependsOn(":app")
+//}
+//
+//tasks.register("clean", Delete) {
+//    delete rootProject.buildDir
+//}
+
+
+buildscript {
+    repositories {
+        google()  // Add Google's Maven repository
+        mavenCentral()  // Add Maven Central repository
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'  // Make sure the AGP version is correct
+        classpath 'com.google.gms:google-services:4.4.2'
+    }
+}
+
+allprojects {
+    repositories {
+        google()  // Add Google's Maven repository for all subprojects
+        mavenCentral()  // Add Maven Central repository for all subprojects
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
