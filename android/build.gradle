@@ -24,7 +24,7 @@ buildscript {
         mavenCentral()  // Add Maven Central repository
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.4'  // Make sure the AGP version is correct
+        classpath 'com.android.tools.build:gradle:8.2.1'
         classpath 'com.google.gms:google-services:4.4.2'
     }
 }

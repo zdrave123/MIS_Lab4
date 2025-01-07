@@ -37,8 +37,14 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_maps_flutter: ^2.1.7
   table_calendar: ^3.0.9
-  location: ^4.3.0
+  geolocator: ^9.0.2
+  url_launcher: ^6.1.11
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.1
+  provider: ^6.1.1
+  http: ^1.1.0
   shared_preferences: ^2.1.1
+  syncfusion_flutter_calendar: ^28.1.38
 
 dev_dependencies:
   flutter_test:
