@@ -1,18 +1,18 @@
 import 'package:flutter/foundation.dart';
 
-import 'package:mis_lab4/models/exam_event.dart';
+import 'package:mis_lab4/models/exam.dart';
 
-class ExamProvider with ChangeNotifier {
-  List<ExamEvent> _events = [];
+class ExamService with ChangeNotifier {
+  List<Exam> _events = [];
 
-  List<ExamEvent> get events => _events;
+  List<Exam> get events => _events;
 
-  void addEvent(ExamEvent event) {
+  void addEvent(Exam event) {
     _events.add(event);
     notifyListeners();
   }
 
-  List<ExamEvent> getEventsForDay(DateTime day) {
+  List<Exam> getEventsForDay(DateTime day) {
     return _events.where((event) =>
     event.dateTime.year == day.year &&
         event.dateTime.month == day.month &&
